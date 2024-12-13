@@ -50,7 +50,7 @@ const latestProjects = [
     daysLeft: 2, 
     supporters: 1500, 
     successRate: 160,
-    walletAddress: "addr_test1qzr62yz87n6cd8arq38qhaw4sk2588z9vedlwup9gdhu73td6uznftkdmqqr4yvfe5cyeq9l5fssxvftecrg8dqhymasxcsk64"
+    walletAddress: "addr_test1qpk52677keddczzacxyfkdx6a4x90zmu2pwkt92ncsjzzvcheraha7pjyvyk0nr6s4jrytgw4dm8vc4k69dp276exjuq5fx5l3"
   }
 ];
 
