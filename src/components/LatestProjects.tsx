@@ -102,7 +102,7 @@ const LatestProjects = () => {
                   defaultAddress={project.walletAddress}
                   projectTitle={project.title}
                   onClose={handleCloseTransfer}
-                  onSuccess={(amount) => handleSuccessfulTransfer(project.id, amount)}
+                  onSuccess={(amount: number) => handleSuccessfulTransfer(project.id, amount)}
                 />
               )}
             </div>

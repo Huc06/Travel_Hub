@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { useState } from "react";
 import { useLucid } from "../context/LucidProvider";
 
 interface TransferAdaProps {
