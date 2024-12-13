@@ -28,7 +28,7 @@ const Projects = () => {
     {
       id: 1,
       title: "Chainsaw Man",
-      description: "Một câu chuyện về Denji, một chàng trai trẻ hợp tác với một con quỷ để trở thành Chainsaw Man.",
+      description: "A story about Denji, a young man who partners with a demon to become Chainsaw Man.",
       image: "/images/best-chainsaw-man-characters.jpg",
       progress: 80,
       amountRaised: "500",
@@ -45,7 +45,7 @@ const Projects = () => {
     {
       id: 2,
       title: "Jujutsu Kaisen",
-      description: "Câu chuyện về Yuji Itadori, một học sinh trung học chiến đấu chống lại những lời nguyền.",
+      description: "The story of Yuji Itadori, a high school student fighting against curses.",
       image: "/images/jujutsu-kaisen.jpg",
       progress: 70,
       amountRaised: "50000",
@@ -62,7 +62,7 @@ const Projects = () => {
     {
       id: 3,
       title: "Spy x Family",
-      description: "Một điệp viên phải tạo ra một gia đình giả để hoàn thành nhiệm vụ của mình.",
+      description: "A spy must create a fake family to complete his mission.",
       image: "/images/spy_x_family.jpg",
       progress: 90,
       amountRaised: "500000",
@@ -79,7 +79,7 @@ const Projects = () => {
     {
       id: 4,
       title: "One Punch Man",
-      description: "Câu chuyện về Saitama, một siêu anh hùng có thể đánh bại mọi kẻ thù chỉ với một cú đấm.",
+      description: "The story of Saitama, a superhero who can defeat any enemy with a single punch.",
       image: "/images/one-punch-man.png",
       progress: 0,
       amountRaised: "0",
@@ -114,7 +114,7 @@ const Projects = () => {
 
   return (
     <div className="container mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold mb-8 text-center">Dự án Manga</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">Manga Projects</h1>
       
       <div className="flex justify-center mb-8 space-x-4">
         <button
@@ -125,7 +125,7 @@ const Projects = () => {
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >
-          Tất cả
+          All
         </button>
         <button
           onClick={() => setFilter('ongoing')}
@@ -135,7 +135,7 @@ const Projects = () => {
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >
-          Đang thực hiện
+          Ongoing
         </button>
         <button
           onClick={() => setFilter('completed')}
@@ -145,7 +145,7 @@ const Projects = () => {
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >
-          Đã hoàn thành
+          Completed
         </button>
         <button
           onClick={() => setFilter('upcoming')}
@@ -155,7 +155,7 @@ const Projects = () => {
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >
-          Sắp ra mắt
+          Upcoming
         </button>
       </div>
 
@@ -167,15 +167,15 @@ const Projects = () => {
             <div className="p-4 border-t">
               <div className="space-y-2 mb-4">
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-600">Tác giả:</span>
+                  <span className="text-gray-600">Author:</span>
                   <span className="font-medium">{project.author}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-600">Nhóm dịch:</span>
+                  <span className="text-gray-600">Translator:</span>
                   <span className="font-medium">{project.translator}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-600">Tiến độ:</span>
+                  <span className="text-gray-600">Progress:</span>
                   <span className="font-medium">
                     {project.completedChapters}/{project.totalChapters} chapters
                   </span>
@@ -186,7 +186,7 @@ const Projects = () => {
                 className="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300"
                 onClick={() => handleProjectClick(project)}
               >
-                Ủng hộ dự án này
+                Support this project
               </button>
             </div>
 

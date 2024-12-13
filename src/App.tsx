@@ -1,7 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 import Hero from './components/Hero'
+import Stats from './components/Stats'
+import LatestProjects from './components/LatestProjects';
+import Testimonials from './components/Testimonials'
+import Newsletter from './components/Newsletter'
 import Footer from './components/Footer'
-import LatestProjects from './components/LatestProjects'
 import Header from './components/Header'
 import Projects from './components/Projects'
 import CurrentPlan from './components/CurrentPlan'
@@ -15,7 +18,10 @@ function App() {
         <Route path="/" element={
           <>
             <Hero />
+            <Stats />
             <LatestProjects />
+            <Testimonials />
+            <Newsletter />
           </>
         } />
         <Route path="/projects" element={<Projects />} />

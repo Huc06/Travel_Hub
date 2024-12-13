@@ -8,7 +8,7 @@ const Dao = () => {
 
   return (
     <div className="container mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold mb-8 text-center">Quản trị DAO</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">DAO Governance</h1>
       
       <div className="mb-8">
         <VotingPower />
@@ -25,7 +25,7 @@ const Dao = () => {
               }`}
               onClick={() => setActiveTab('proposals')}
             >
-              Danh sách đề xuất
+              Proposal List
             </button>
             <button
               className={`px-6 py-4 text-lg font-medium ${
@@ -35,7 +35,7 @@ const Dao = () => {
               }`}
               onClick={() => setActiveTab('create')}
             >
-              Tạo đề xuất mới
+              Create New Proposal
             </button>
           </nav>
         </div>

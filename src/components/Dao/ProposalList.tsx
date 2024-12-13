@@ -12,8 +12,8 @@ const ProposalList = () => {
   const proposals: Proposal[] = [
     {
       id: 1,
-      title: "Dịch manga Chainsaw Man",
-      description: "Đề xuất dịch toàn bộ manga Chainsaw Man sang tiếng Việt",
+      title: "Translate Chainsaw Man Manga",
+      description: "Proposal to translate the entire Chainsaw Man manga into Vietnamese",
       status: 'active',
       votesFor: 750000,
       votesAgainst: 250000,
@@ -21,8 +21,8 @@ const ProposalList = () => {
     },
     {
       id: 2,
-      title: "Dịch manga Jujutsu Kaisen",
-      description: "Đề xuất dịch manga Jujutsu Kaisen từ chapter 100",
+      title: "Translate Jujutsu Kaisen Manga",
+      description: "Proposal to translate Jujutsu Kaisen manga from chapter 100",
       status: 'passed',
       votesFor: 800000,
       votesAgainst: 100000,
@@ -44,16 +44,16 @@ const ProposalList = () => {
               proposal.status === 'passed' ? 'bg-green-100 text-green-800' :
               'bg-red-100 text-red-800'
             }`}>
-              {proposal.status === 'active' ? 'Đang diễn ra' :
-               proposal.status === 'passed' ? 'Đã thông qua' :
-               'Không thông qua'}
+              {proposal.status === 'active' ? 'Ongoing' :
+               proposal.status === 'passed' ? 'Passed' :
+               'Failed'}
             </span>
           </div>
           
           <div className="mb-4">
             <div className="flex justify-between text-sm text-gray-600 mb-1">
-              <span>Đồng ý ({proposal.votesFor.toLocaleString()} votes)</span>
-              <span>Phản đối ({proposal.votesAgainst.toLocaleString()} votes)</span>
+              <span>For ({proposal.votesFor.toLocaleString()} votes)</span>
+              <span>Against ({proposal.votesAgainst.toLocaleString()} votes)</span>
             </div>
             <div className="h-2 bg-gray-200 rounded-full">
               <div
@@ -67,15 +67,15 @@ const ProposalList = () => {
 
           <div className="flex justify-between items-center">
             <div className="text-sm text-gray-600">
-              Kết thúc: {new Date(proposal.endTime).toLocaleDateString()}
+              Ends: {new Date(proposal.endTime).toLocaleDateString()}
             </div>
             {proposal.status === 'active' && (
               <div className="space-x-4">
                 <button className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">
-                  Đồng ý
+                  For
                 </button>
                 <button className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">
-                  Phản đối
+                  Against
                 </button>
               </div>
             )}

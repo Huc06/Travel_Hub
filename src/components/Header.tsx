@@ -18,16 +18,16 @@ const Header = () => {
         
         <nav className="flex items-center space-x-6 text-lg">
           <Link to="/" className="text-gray-700 hover:text-pink-500 transition-colors">
-            Trang Chủ
+            Home
           </Link>
           <Link to="/projects" className="text-gray-700 hover:text-pink-500 transition-colors">
-            Dự án Manga
+            Manga Projects
           </Link>
           <Link to="/dao" className="text-gray-700 hover:text-pink-500 transition-colors">
-            Quản trị DAO
+            DAO Governance
           </Link>
           <Link to="/CurrentPlan" className="text-gray-700 hover:text-pink-500 transition-colors">
-            Lộ trình
+            Roadmap
           </Link>
         </nav>
 
@@ -60,7 +60,7 @@ const Header = () => {
                 {isDropdownOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-1 z-10">
                     <div className="px-4 py-2 text-sm text-gray-700 border-b border-gray-200">
-                      <p className="font-medium">Token Quản trị</p>
+                      <p className="font-medium">Governance Token</p>
                       <p className="text-pink-600">0 DAO</p>
                     </div>
                     <button 

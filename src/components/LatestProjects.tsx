@@ -19,7 +19,7 @@ const latestProjects = [
   { 
     id: 1, 
     title: "Chainsaw Man", 
-    description: "Một câu chuyện về Denji, một chàng trai trẻ hợp tác với một con quỷ để trở thành Chainsaw Man.", 
+    description: "A story about Denji, a young man who partners with a demon to become Chainsaw Man.", 
     image: "/images/best-chainsaw-man-characters.jpg", 
     progress: 80, 
     amountRaised: "500", 
@@ -31,7 +31,7 @@ const latestProjects = [
   { 
     id: 2, 
     title: "Jujutsu Kaisen", 
-    description: "Câu chuyện về Yuji Itadori, một học sinh trung học chiến đấu chống lại những lời nguyền.", 
+    description: "The story of Yuji Itadori, a high school student fighting against curses.", 
     image: "/images/jujutsu-kaisen.jpg", 
     progress: 70, 
     amountRaised: "50000", 
@@ -43,7 +43,7 @@ const latestProjects = [
   { 
     id: 3, 
     title: "Spy x Family", 
-    description: "Một điệp viên phải tạo ra một gia đình giả để hoàn thành nhiệm vụ của mình.", 
+    description: "A spy must create a fake family to complete his mission.", 
     image: "/images/spy_x_family.jpg", 
     progress: 90, 
     amountRaised: "500000", 
@@ -84,7 +84,7 @@ const LatestProjects = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-semibold mb-12">Dự án mới nhất</h2>
+        <h2 className="text-3xl font-semibold mb-12">Latest Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div key={project.id} className="bg-white rounded-lg shadow-lg p-6">
@@ -94,7 +94,7 @@ const LatestProjects = () => {
                   className="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-full transition duration-300"
                   onClick={() => handleProjectClick(project)}
                 >
-                  Ủng hộ dự án này
+                  Support this project
                 </button>
               </div>
               {selectedProject?.id === project.id && (
