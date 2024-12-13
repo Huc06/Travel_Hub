@@ -10,36 +10,46 @@ interface ProjectCardProps {
   }
   
   const ProjectCard = ({ title, description, image, progress, amountRaised, daysLeft, supporters, successRate }: ProjectCardProps) => {
-    const formatAmount = (amount: string) => {
-        return new Intl.NumberFormat('vi-VN').format(parseInt(amount));
-    };
-
     return (
-        <div className="border rounded-lg overflow-hidden shadow-lg flex flex-col items-center">
-            <img src={image} alt={title} className="w-full h-48 object-cover" />
-            <div className="p-4 flex flex-col items-center flex-grow">
-                <h2 className="font-bold text-xl text-center mb-2">{title}</h2>
-                <p className="text-gray-700 text-center mb-4">{description}</p>
-                <div className="mt-2 w-full">
-                    <p className="text-sm text-gray-600 text-center">
-                        {formatAmount(amountRaised)} ADA đã được ủng hộ
-                    </p>
-                    <div className="bg-gray-200 rounded-full h-2">
-                        <div className="bg-blue-600 h-2 rounded-full" style={{ width: `${progress}%` }}></div>
+        <div className="bg-white rounded-xl shadow-lg transform transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div className="relative">
+                <img 
+                    src={image} 
+                    alt={title} 
+                    className="w-full h-48 object-cover rounded-t-xl"
+                />
+                <div className="absolute top-0 right-0 bg-pink-500 text-white px-3 py-1 m-2 rounded-full text-sm">
+                    {daysLeft} ngày còn lại
+                </div>
+            </div>
+
+            <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">{title}</h3>
+                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                    {description}
+                </p>
+
+                <div className="mb-4">
+                    <div className="flex justify-between text-sm text-gray-600 mb-1">
+                        <span>{parseInt(amountRaised).toLocaleString()} ADA</span>
+                        <span>{progress}%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                        <div 
+                            className="bg-pink-500 rounded-full h-2 transition-all duration-300"
+                            style={{ width: `${progress}%` }}
+                        />
                     </div>
                 </div>
-                <div className="mt-4 text-sm text-gray-600 flex justify-center space-x-8">
-                    <div className="text-center">
-                        <p className="font-bold">{daysLeft}</p>
-                        <p className="text-pink-600">Ngày còn lại</p>
+
+                <div className="flex justify-between text-sm text-gray-600">
+                    <div>
+                        <span className="font-medium">{supporters}</span>
+                        <span className="ml-1">người ủng hộ</span>
                     </div>
-                    <div className="text-center">
-                        <p className="font-bold">{supporters}</p>
-                        <p className="text-pink-600">Người ủng hộ</p>
-                    </div>
-                    <div className="text-center">
-                        <p className="font-bold">{successRate}%</p>
-                        <p className="text-pink-600">Thành công</p>
+                    <div>
+                        <span className="font-medium">{successRate}%</span>
+                        <span className="ml-1">thành công</span>
                     </div>
                 </div>
             </div>
