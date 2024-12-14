@@ -8,11 +8,12 @@ const Header = () => {
   const isConnected = !!walletAddress;
 
   return (
-    <header className="bg-white-800 p-4 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
+    <header className="bg-white shadow-md">
+      <div className="container mx-auto flex justify-between items-center p-4">
         <div className="flex items-center">
           <Link to="/" className="text-black text-4xl font-bold">
-            Community Manga
+            {/* <img src="https://example.com/logo.png" alt="Logo" className="h-10 mr-2" /> */}
+            Cardano Travel
           </Link>
         </div>
         
@@ -20,14 +21,14 @@ const Header = () => {
           <Link to="/" className="text-gray-700 hover:text-pink-500 transition-colors">
             Home
           </Link>
-          <Link to="/projects" className="text-gray-700 hover:text-pink-500 transition-colors">
-            Manga Projects
+          <Link to="/hotel-booking" className="text-gray-700 hover:text-pink-500 transition-colors">
+            Hotel Booking
           </Link>
-          <Link to="/dao" className="text-gray-700 hover:text-pink-500 transition-colors">
-            DAO Governance
+          <Link to="/flight-booking" className="text-gray-700 hover:text-pink-500 transition-colors">
+            Flight Booking
           </Link>
-          <Link to="/CurrentPlan" className="text-gray-700 hover:text-pink-500 transition-colors">
-            Roadmap
+          <Link to="/services" className="text-gray-700 hover:text-pink-500 transition-colors">
+            services
           </Link>
         </nav>
 
@@ -35,7 +36,7 @@ const Header = () => {
           <div className="relative">
             {!isConnected ? (
               <button 
-                className="px-4 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors duration-200 font-medium shadow-sm hover:shadow-md" 
+                className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors duration-200 font-medium shadow-sm hover:shadow-md" 
                 onClick={connectWallet}
               >
                 Connect Wallet
@@ -43,7 +44,7 @@ const Header = () => {
             ) : (
               <>
                 <button 
-                  className="px-4 py-2 bg-pink-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-200 font-medium shadow-sm hover:shadow-md flex items-center space-x-2"
+                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium shadow-sm hover:shadow-md flex items-center space-x-2"
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 >
                   <span>Connected</span>
@@ -59,15 +60,11 @@ const Header = () => {
 
                 {isDropdownOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-1 z-10">
-                    <div className="px-4 py-2 text-sm text-gray-700 border-b border-gray-200">
-                      <p className="font-medium">Governance Token</p>
-                      <p className="text-pink-600">0 DAO</p>
-                    </div>
                     <button 
                       onClick={async () => {
-                        const addr = await lucid?.wallet.address()
+                        const addr = await lucid?.wallet.address();
                         if (addr) {
-                          await navigator.clipboard.writeText(addr)
+                          await navigator.clipboard.writeText(addr);
                         }
                       }}
                       className="w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between"

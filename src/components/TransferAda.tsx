@@ -10,7 +10,6 @@ interface TransferAdaProps {
 
 export const TransferAda: React.FC<TransferAdaProps> = ({ 
   defaultAddress, 
-  projectTitle, 
   onClose,
   onSuccess 
 }) => {
@@ -32,8 +31,6 @@ export const TransferAda: React.FC<TransferAdaProps> = ({
             const txHashResult = await signedTx.submit();
             setTxHash(txHashResult);
             
-            // Chỉ gọi onSuccess để cập nhật số tiền, không đóng modal
-            onSuccess(ada);
         } catch (error) {
             console.error('Transfer failed:', error);
         }
@@ -52,13 +49,13 @@ export const TransferAda: React.FC<TransferAdaProps> = ({
                 </button>
 
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-                    Support the project {projectTitle}
+                    Book Your Travel Experience
                 </h2>
                 
                 <div className="space-y-6">
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                            Amount of ADA
+                            Amount of ADA for Booking
                         </label>
                         <input 
                             type="number" 
@@ -71,7 +68,7 @@ export const TransferAda: React.FC<TransferAdaProps> = ({
 
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                            Project wallet address
+                            Travel Agency Wallet Address
                         </label>
                         <input 
                             type="text" 
@@ -84,9 +81,9 @@ export const TransferAda: React.FC<TransferAdaProps> = ({
 
                     <button 
                         onClick={transferAda}
-                        className="w-full py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold rounded-lg hover:opacity-90 transition duration-300"
+                        className="w-full py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold rounded-lg hover:opacity-90 transition duration-300"
                     >
-                        Confirm ADA transfer
+                        Confirm ADA Transfer
                     </button>
 
                     {txHash && (
