@@ -52,33 +52,33 @@ export const TransferAda: React.FC<TransferAdaProps> = ({
                 </button>
 
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-                    Ủng hộ dự án {projectTitle}
+                    Support the project {projectTitle}
                 </h2>
                 
                 <div className="space-y-6">
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                            Số lượng ADA
+                            Amount of ADA
                         </label>
                         <input 
                             type="number" 
                             value={ada} 
                             onChange={(e) => setAda(Number(e.target.value))}
                             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                            placeholder="Nhập số ADA" 
+                            placeholder="Enter amount of ADA" 
                         />
                     </div>
 
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                            Địa chỉ ví dự án
+                            Project wallet address
                         </label>
                         <input 
                             type="text" 
                             value={receiverAddress} 
                             onChange={(e) => setReceiverAddress(e.target.value)}
                             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                            placeholder="Địa chỉ ví" 
+                            placeholder="Wallet address" 
                         />
                     </div>
 
@@ -86,13 +86,13 @@ export const TransferAda: React.FC<TransferAdaProps> = ({
                         onClick={transferAda}
                         className="w-full py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold rounded-lg hover:opacity-90 transition duration-300"
                     >
-                        Xác nhận chuyển ADA
+                        Confirm ADA transfer
                     </button>
 
                     {txHash && (
                         <div className="mt-4 p-4 bg-green-50 rounded-lg">
                             <p className="text-sm text-green-800">
-                                Giao dịch thành công! Hash: 
+                                Transaction successful! Hash: 
                                 <span className="font-mono break-all">
                                     {txHash}
                                 </span>
