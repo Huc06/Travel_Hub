@@ -19,7 +19,7 @@ interface ProjectCardProps {
                     className="w-full h-48 object-cover rounded-t-xl"
                 />
                 <div className="absolute top-0 right-0 bg-pink-500 text-white px-3 py-1 m-2 rounded-full text-sm">
-                    {daysLeft} ngày còn lại
+                    {daysLeft} days left
                 </div>
             </div>
 
@@ -45,11 +45,11 @@ interface ProjectCardProps {
                 <div className="flex justify-between text-sm text-gray-600">
                     <div>
                         <span className="font-medium">{supporters}</span>
-                        <span className="ml-1">người ủng hộ</span>
+                        <span className="ml-1">supporters</span>
                     </div>
                     <div>
                         <span className="font-medium">{successRate}%</span>
-                        <span className="ml-1">thành công</span>
+                        <span className="ml-1">success</span>
                     </div>
                 </div>
             </div>
