@@ -32,8 +32,8 @@ This project is a decentralized travel booking application built with React, Typ
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/cardano-manga.git
-   cd cardano-manga
+   git clone https://github.com/Huc06/Travel_Hub.git
+   cd Travel_Hub
    ```
 
 2. Install dependencies:
